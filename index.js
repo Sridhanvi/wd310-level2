@@ -19,11 +19,11 @@ fs.readFile("project.html", (err, project) => {
   projectContent = project;
 });
 
-fs.readFile("registration.html", (err, register) => {
+fs.readFile("registration.html", (err, registeration) => {
   if (err) {
     throw err;
   }
-  regcontent = register;
+  regcontent = registeration;
 });
 
 const args = require("minimist")(process.argv.slice(1));
@@ -37,7 +37,7 @@ http
         response.write(projectContent);
         response.end();
         break;
-      case "/register":
+      case "/registeration":
         response.write(regcontent);
         response.end();
         break;
